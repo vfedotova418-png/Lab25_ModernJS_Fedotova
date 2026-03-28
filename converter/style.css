@@ -1,0 +1,32 @@
+* {
+    font-family: Comic Sans MS, sans-serif, serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+h1 {
+    font-size: 40px;
+}
+#amount {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#currency {
+    padding: 5px 20px;
+    margin-bottom: 30px;
+}
+#convertBtn {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: rgb(231, 200, 255);
+    border-color: blueviolet;
+    border-radius: 5px;
+}
+#convertBtn:hover {
+    background-color: rgb(221, 176, 255);
+    cursor: pointer;
+}

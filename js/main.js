@@ -461,30 +461,30 @@
 // const defaultLanguage = emptyResponse?.data?.user?.profile?.settings?.language ?? "en";
 // console.log("Язык по умолчанию:", defaultLanguage);
 
-const order = {
-    customer: {
-        name: "Helel Polypheus"
-    },
-    shipping: {
-        address: "г. Москва, ул. Ленина, д. 10, кв. 5",
-        zip: "101000"
-    },
-    payment: {
-        method: "card",
-        sum: 2300
-    }
-};
-function displayOrder(data) {
-    console.log("Клиент:");
-    console.log(`Имя: ${data?.customer?.name ?? "Не указано"}`);
-    console.log(`Телефон: ${data?.customer?.phone ?? "Не указан"}`);
+// const order = {
+//     customer: {
+//         name: "Helel Polypheus"
+//     },
+//     shipping: {
+//         address: "г. Москва, ул. Ленина, д. 10, кв. 5",
+//         zip: "101000"
+//     },
+//     payment: {
+//         method: "card",
+//         sum: 2300
+//     }
+// };
+// function displayOrder(data) {
+//     console.log("Клиент:");
+//     console.log(`Имя: ${data?.customer?.name ?? "Не указано"}`);
+//     console.log(`Телефон: ${data?.customer?.phone ?? "Не указан"}`);
     
-    console.log("\nДоставка:");
-    console.log(`Адрес: ${data?.shipping?.address ?? "Не указан"}`);
-    console.log(`Индекс: ${data?.shipping?.zip ?? "Не указан"}`);
+//     console.log("\nДоставка:");
+//     console.log(`Адрес: ${data?.shipping?.address ?? "Не указан"}`);
+//     console.log(`Индекс: ${data?.shipping?.zip ?? "Не указан"}`);
     
-    console.log("\nОплата:");
-    console.log(`Метод: ${data?.payment?.method ?? "Не указан"}`);
-    console.log(`Сумма: ${data?.payment?.sum ?? 0} руб.`);
-}
-displayOrder(order);
+//     console.log("\nОплата:");
+//     console.log(`Метод: ${data?.payment?.method ?? "Не указан"}`);
+//     console.log(`Сумма: ${data?.payment?.sum ?? 0} руб.`);
+// }
+// displayOrder(order);
