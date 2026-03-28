@@ -373,3 +373,118 @@
 // }
 // createPost();
 
+// console.log("Optional Chaining");
+// const user1 = {
+//     name: "Андрей",
+//     address: {
+//         city: "Волжский",
+//         street: "Пушкина",
+//     },
+// };
+// const user2 = {
+//     name: "Дмитрий",
+// };
+// const city1 = user2.address && user2.address.city;
+// console.log("Город (старый способ):", city1);
+// const city2 = user2.address?.city;
+// console.log("Город (новый способ):", city2);
+// const street = user1.address?.street;
+// console.log("улица:", street);
+
+// const admin = {
+//     name: "Администратор",
+//     permissions: {
+//         canDelete: () => true,
+//     },
+// };
+// const guest = {
+//     name: "Гость",
+// };
+// console.log("Админ может удалять?", admin.permissions?.canDelete?.());
+// console.log("Гость может удалять?", guest.permissions?.canDelete?.());
+
+// const company = {
+//     name: "Tech Corp",
+//     employess: [
+//         { name: "Надежда", role: "Developer" },
+//         { name: "Анна", role: "Designer" },
+//     ],
+// };
+// const startup = {
+//     name: "New Startup",
+// };
+// console.log("Первый сотрудник:", company.employess?.[0]?.name);
+// console.log("Первый сотрудник стартапа:", startup.employess?.[0]?.name);
+
+// console.log("Nullish Coalescing");
+// const value1 = 0;
+// const value2 = "";
+// const value3 = false;
+// const value4 = null;
+// const value5 = undefined;
+// console.log('value1 || "default":', value1 || "default");
+// console.log('value2 || "default":', value2 || "default");
+// console.log('value3 || "default":', value3 || "default");
+// console.log('value1 ?? "default":', value1 ?? "default");
+// console.log('value2 ?? "default":', value2 ?? "default");
+// console.log('value3 ?? "default":', value3 ?? "default");
+// console.log('value4 ?? "default":', value4 ?? "default");
+// console.log('value5 ?? "default":', value5 ?? "default");
+
+// function displayUserSettings(settings) {
+//     const theme = settings?.theme ?? "light";
+//     const fontSize = settings?.fontSize ?? 14;
+//     const notifications = settings?.notifications ?? true;
+//     console.log("Настройки пользователя:");
+//     console.log("Тема:", theme);
+//     console.log("Размер шрифта:", fontSize);
+//     console.log("Уведомления:", notifications);
+// }
+// displayUserSettings({ theme: "dark", fontSize: 16 });
+// displayUserSettings({ notifications: false });
+// displayUserSettings({  });
+
+// const apiResponse = {
+//     data: {
+//         user: {
+//             profile: {
+//                 settings: {
+//                     language: "ru",
+//                 },
+//             },
+//         },
+//     },
+// };
+// const language = apiResponse?.data?.user?.profile?.settings?.language ?? "en";
+// console.log("Язык:", language);
+// const emptyResponse = {};
+// const defaultLanguage = emptyResponse?.data?.user?.profile?.settings?.language ?? "en";
+// console.log("Язык по умолчанию:", defaultLanguage);
+
+const order = {
+    customer: {
+        name: "Helel Polypheus"
+    },
+    shipping: {
+        address: "г. Москва, ул. Ленина, д. 10, кв. 5",
+        zip: "101000"
+    },
+    payment: {
+        method: "card",
+        sum: 2300
+    }
+};
+function displayOrder(data) {
+    console.log("Клиент:");
+    console.log(`Имя: ${data?.customer?.name ?? "Не указано"}`);
+    console.log(`Телефон: ${data?.customer?.phone ?? "Не указан"}`);
+    
+    console.log("\nДоставка:");
+    console.log(`Адрес: ${data?.shipping?.address ?? "Не указан"}`);
+    console.log(`Индекс: ${data?.shipping?.zip ?? "Не указан"}`);
+    
+    console.log("\nОплата:");
+    console.log(`Метод: ${data?.payment?.method ?? "Не указан"}`);
+    console.log(`Сумма: ${data?.payment?.sum ?? 0} руб.`);
+}
+displayOrder(order);
